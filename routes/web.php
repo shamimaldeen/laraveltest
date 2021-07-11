@@ -21,3 +21,4 @@ Route::match(['get', 'post'], '/admin/login', 'AdminController@login');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::resource('/todos', 'TodoController');

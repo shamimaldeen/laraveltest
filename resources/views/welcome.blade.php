@@ -87,8 +87,8 @@
                 <div class="links">
                     <a href="{{ url('/user/login') }}">Custom User Login </a>
                     <a href="{{ url('/admin/login') }}"> Custom Admin Login </a>
-                   <!--  <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
+                     <a href="{{ url('/todos') }}">Todo</a>
+                    <!--<a href="https://blog.laravel.com">Blog</a>
                     <a href="https://nova.laravel.com">Nova</a>
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://vapor.laravel.com">Vapor</a>

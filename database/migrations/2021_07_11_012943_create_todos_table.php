@@ -6,21 +6,29 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateTodosTable extends Migration
 {
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
     public function up()
     {
         Schema::create('todos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->text('title');
-            $table->longText('description');
-            $table->tinyInteger('status')->default(1);
+             $table->string('name');
+            $table->string('email');
+            $table->string('phone');
             $table->timestamps();
         });
     }
 
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
     public function down()
     {
-        Schema::dropForeign('admin_id');
-        Schema::dropForeign('blog_category_id');
-        Schema::dropIfExists('blog_posts');
+        Schema::dropIfExists('todos');
     }
 }
